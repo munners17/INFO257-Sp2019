@@ -1,2 +1,2 @@
-# INFO257-Sp2018
-INFO 257 Database Management Spring 2018 Course Materials
+# INFO257-Sp2019
+INFO 257 Database Management Spring 2019 Course Materials
