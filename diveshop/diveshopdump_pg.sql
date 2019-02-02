@@ -16,20 +16,20 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: diveshop; Type: SCHEMA; Schema: -; Owner: laguilar
+-- Name: diveshop; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
 CREATE SCHEMA diveshop;
 
 
-ALTER SCHEMA diveshop OWNER TO laguilar;
+ALTER SCHEMA diveshop OWNER TO postgres;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: biolife; Type: TABLE; Schema: diveshop; Owner: laguilar
+-- Name: biolife; Type: TABLE; Schema: diveshop; Owner: postgres
 --
 
 CREATE TABLE diveshop.biolife (
@@ -44,10 +44,10 @@ CREATE TABLE diveshop.biolife (
 );
 
 
-ALTER TABLE diveshop.biolife OWNER TO laguilar;
+ALTER TABLE diveshop.biolife OWNER TO postgres;
 
 --
--- Name: biosite; Type: TABLE; Schema: diveshop; Owner: laguilar
+-- Name: biosite; Type: TABLE; Schema: diveshop; Owner: postgres
 --
 
 CREATE TABLE diveshop.biosite (
@@ -56,10 +56,10 @@ CREATE TABLE diveshop.biosite (
 );
 
 
-ALTER TABLE diveshop.biosite OWNER TO laguilar;
+ALTER TABLE diveshop.biosite OWNER TO postgres;
 
 --
--- Name: dest; Type: TABLE; Schema: diveshop; Owner: laguilar
+-- Name: dest; Type: TABLE; Schema: diveshop; Owner: postgres
 --
 
 CREATE TABLE diveshop.dest (
@@ -82,10 +82,10 @@ CREATE TABLE diveshop.dest (
 );
 
 
-ALTER TABLE diveshop.dest OWNER TO laguilar;
+ALTER TABLE diveshop.dest OWNER TO postgres;
 
 --
--- Name: divecust; Type: TABLE; Schema: diveshop; Owner: laguilar
+-- Name: divecust; Type: TABLE; Schema: diveshop; Owner: postgres
 --
 
 CREATE TABLE diveshop.divecust (
@@ -101,10 +101,10 @@ CREATE TABLE diveshop.divecust (
 );
 
 
-ALTER TABLE diveshop.divecust OWNER TO laguilar;
+ALTER TABLE diveshop.divecust OWNER TO postgres;
 
 --
--- Name: diveitem; Type: TABLE; Schema: diveshop; Owner: laguilar
+-- Name: diveitem; Type: TABLE; Schema: diveshop; Owner: postgres
 --
 
 CREATE TABLE diveshop.diveitem (
@@ -116,10 +116,10 @@ CREATE TABLE diveshop.diveitem (
 );
 
 
-ALTER TABLE diveshop.diveitem OWNER TO laguilar;
+ALTER TABLE diveshop.diveitem OWNER TO postgres;
 
 --
--- Name: diveords; Type: TABLE; Schema: diveshop; Owner: laguilar
+-- Name: diveords; Type: TABLE; Schema: diveshop; Owner: postgres
 --
 
 CREATE TABLE diveshop.diveords (
@@ -139,10 +139,10 @@ CREATE TABLE diveshop.diveords (
 );
 
 
-ALTER TABLE diveshop.diveords OWNER TO laguilar;
+ALTER TABLE diveshop.diveords OWNER TO postgres;
 
 --
--- Name: divestok; Type: TABLE; Schema: diveshop; Owner: laguilar
+-- Name: divestok; Type: TABLE; Schema: diveshop; Owner: postgres
 --
 
 CREATE TABLE diveshop.divestok (
@@ -157,10 +157,10 @@ CREATE TABLE diveshop.divestok (
 );
 
 
-ALTER TABLE diveshop.divestok OWNER TO laguilar;
+ALTER TABLE diveshop.divestok OWNER TO postgres;
 
 --
--- Name: shipvia; Type: TABLE; Schema: diveshop; Owner: laguilar
+-- Name: shipvia; Type: TABLE; Schema: diveshop; Owner: postgres
 --
 
 CREATE TABLE diveshop.shipvia (
@@ -169,10 +169,10 @@ CREATE TABLE diveshop.shipvia (
 );
 
 
-ALTER TABLE diveshop.shipvia OWNER TO laguilar;
+ALTER TABLE diveshop.shipvia OWNER TO postgres;
 
 --
--- Name: shipwrck; Type: TABLE; Schema: diveshop; Owner: laguilar
+-- Name: shipwrck; Type: TABLE; Schema: diveshop; Owner: postgres
 --
 
 CREATE TABLE diveshop.shipwrck (
@@ -196,10 +196,10 @@ CREATE TABLE diveshop.shipwrck (
 );
 
 
-ALTER TABLE diveshop.shipwrck OWNER TO laguilar;
+ALTER TABLE diveshop.shipwrck OWNER TO postgres;
 
 --
--- Name: sites; Type: TABLE; Schema: diveshop; Owner: laguilar
+-- Name: sites; Type: TABLE; Schema: diveshop; Owner: postgres
 --
 
 CREATE TABLE diveshop.sites (
@@ -219,10 +219,10 @@ CREATE TABLE diveshop.sites (
 );
 
 
-ALTER TABLE diveshop.sites OWNER TO laguilar;
+ALTER TABLE diveshop.sites OWNER TO postgres;
 
 --
--- Data for Name: biolife; Type: TABLE DATA; Schema: diveshop; Owner: laguilar
+-- Data for Name: biolife; Type: TABLE DATA; Schema: diveshop; Owner: postgres
 --
 
 COPY diveshop.biolife (species_no, category, common_name, species_name, length_cm, length_in, notes, graphic_file) FROM stdin;
@@ -259,7 +259,7 @@ COPY diveshop.biolife (species_no, category, common_name, species_name, length_c
 
 
 --
--- Data for Name: biosite; Type: TABLE DATA; Schema: diveshop; Owner: laguilar
+-- Data for Name: biosite; Type: TABLE DATA; Schema: diveshop; Owner: postgres
 --
 
 COPY diveshop.biosite (species_no, site_no) FROM stdin;
@@ -624,7 +624,7 @@ COPY diveshop.biosite (species_no, site_no) FROM stdin;
 
 
 --
--- Data for Name: dest; Type: TABLE DATA; Schema: diveshop; Owner: laguilar
+-- Data for Name: dest; Type: TABLE DATA; Schema: diveshop; Owner: postgres
 --
 
 COPY diveshop.dest (destination_no, destination_name, avg_temp_f, avg_temp_c, spring_temp_f, spring_temp_c, summer_temp_f, summer_temp_c, fall_temp_f, fall_temp_c, winter_temp_f, winter_temp_c, accomodations, night_life, body_of_water, travel_cost) FROM stdin;
@@ -640,7 +640,7 @@ COPY diveshop.dest (destination_no, destination_name, avg_temp_f, avg_temp_c, sp
 
 
 --
--- Data for Name: divecust; Type: TABLE DATA; Schema: diveshop; Owner: laguilar
+-- Data for Name: divecust; Type: TABLE DATA; Schema: diveshop; Owner: postgres
 --
 
 COPY diveshop.divecust (customer_no, name, street, city, state_prov, zip_postal_code, country, phone, first_contact) FROM stdin;
@@ -674,7 +674,7 @@ COPY diveshop.divecust (customer_no, name, street, city, state_prov, zip_postal_
 
 
 --
--- Data for Name: diveitem; Type: TABLE DATA; Schema: diveshop; Owner: laguilar
+-- Data for Name: diveitem; Type: TABLE DATA; Schema: diveshop; Owner: postgres
 --
 
 COPY diveshop.diveitem (order_no, item_no, rental_sale, qty, line_note) FROM stdin;
@@ -762,7 +762,7 @@ COPY diveshop.diveitem (order_no, item_no, rental_sale, qty, line_note) FROM std
 
 
 --
--- Data for Name: diveords; Type: TABLE DATA; Schema: diveshop; Owner: laguilar
+-- Data for Name: diveords; Type: TABLE DATA; Schema: diveshop; Owner: postgres
 --
 
 COPY diveshop.diveords (order_no, customer_no, sale_date, ship_via, ship_cost, paymentmethod, ccnumber, ccexpdate, no_of_people, depart_date, return_date, destination, vacationcost) FROM stdin;
@@ -795,7 +795,7 @@ COPY diveshop.diveords (order_no, customer_no, sale_date, ship_via, ship_cost, p
 
 
 --
--- Data for Name: divestok; Type: TABLE DATA; Schema: diveshop; Owner: laguilar
+-- Data for Name: divestok; Type: TABLE DATA; Schema: diveshop; Owner: postgres
 --
 
 COPY diveshop.divestok (item_no, description, equipment_class, on_hand, reorder_point, cost, sale_price, rental_price) FROM stdin;
@@ -895,7 +895,7 @@ COPY diveshop.divestok (item_no, description, equipment_class, on_hand, reorder_
 
 
 --
--- Data for Name: shipvia; Type: TABLE DATA; Schema: diveshop; Owner: laguilar
+-- Data for Name: shipvia; Type: TABLE DATA; Schema: diveshop; Owner: postgres
 --
 
 COPY diveshop.shipvia (ship_via, ship_cost) FROM stdin;
@@ -909,7 +909,7 @@ Walk In	0
 
 
 --
--- Data for Name: shipwrck; Type: TABLE DATA; Schema: diveshop; Owner: laguilar
+-- Data for Name: shipwrck; Type: TABLE DATA; Schema: diveshop; Owner: postgres
 --
 
 COPY diveshop.shipwrck (ship_name, site_no, category, type, interest, tonnage, length_ft, length_m, beam_ft, beam_m, cause, date_sunk, comments, passengers_crew, survivors, condition_1, graphic_file) FROM stdin;
@@ -929,7 +929,7 @@ Ningpo	8000	Commercial	Chinese Junk	Fixture	291	138	42.0623999999999967	22	6.075
 
 
 --
--- Data for Name: sites; Type: TABLE DATA; Schema: diveshop; Owner: laguilar
+-- Data for Name: sites; Type: TABLE DATA; Schema: diveshop; Owner: postgres
 --
 
 COPY diveshop.sites (site_no, destination_no, site_name, site_highlight, site_notes, distance_from_town_m, distance_from_town_km, depth_ft, depth_m, visibility_ft, visibility_m, current, skill_level) FROM stdin;
@@ -979,7 +979,7 @@ COPY diveshop.sites (site_no, destination_no, site_name, site_highlight, site_no
 
 
 --
--- Name: biolife idx_16388_primary; Type: CONSTRAINT; Schema: diveshop; Owner: laguilar
+-- Name: biolife idx_16388_primary; Type: CONSTRAINT; Schema: diveshop; Owner: postgres
 --
 
 ALTER TABLE ONLY diveshop.biolife
@@ -987,7 +987,7 @@ ALTER TABLE ONLY diveshop.biolife
 
 
 --
--- Name: dest idx_16397_primary; Type: CONSTRAINT; Schema: diveshop; Owner: laguilar
+-- Name: dest idx_16397_primary; Type: CONSTRAINT; Schema: diveshop; Owner: postgres
 --
 
 ALTER TABLE ONLY diveshop.dest
@@ -995,7 +995,7 @@ ALTER TABLE ONLY diveshop.dest
 
 
 --
--- Name: divecust idx_16403_primary; Type: CONSTRAINT; Schema: diveshop; Owner: laguilar
+-- Name: divecust idx_16403_primary; Type: CONSTRAINT; Schema: diveshop; Owner: postgres
 --
 
 ALTER TABLE ONLY diveshop.divecust
@@ -1003,7 +1003,7 @@ ALTER TABLE ONLY diveshop.divecust
 
 
 --
--- Name: diveords idx_16415_primary; Type: CONSTRAINT; Schema: diveshop; Owner: laguilar
+-- Name: diveords idx_16415_primary; Type: CONSTRAINT; Schema: diveshop; Owner: postgres
 --
 
 ALTER TABLE ONLY diveshop.diveords
@@ -1011,7 +1011,7 @@ ALTER TABLE ONLY diveshop.diveords
 
 
 --
--- Name: divestok idx_16421_primary; Type: CONSTRAINT; Schema: diveshop; Owner: laguilar
+-- Name: divestok idx_16421_primary; Type: CONSTRAINT; Schema: diveshop; Owner: postgres
 --
 
 ALTER TABLE ONLY diveshop.divestok
@@ -1019,7 +1019,7 @@ ALTER TABLE ONLY diveshop.divestok
 
 
 --
--- Name: shipvia idx_16427_primary; Type: CONSTRAINT; Schema: diveshop; Owner: laguilar
+-- Name: shipvia idx_16427_primary; Type: CONSTRAINT; Schema: diveshop; Owner: postgres
 --
 
 ALTER TABLE ONLY diveshop.shipvia
@@ -1027,7 +1027,7 @@ ALTER TABLE ONLY diveshop.shipvia
 
 
 --
--- Name: shipwrck idx_16430_primary; Type: CONSTRAINT; Schema: diveshop; Owner: laguilar
+-- Name: shipwrck idx_16430_primary; Type: CONSTRAINT; Schema: diveshop; Owner: postgres
 --
 
 ALTER TABLE ONLY diveshop.shipwrck
@@ -1035,7 +1035,7 @@ ALTER TABLE ONLY diveshop.shipwrck
 
 
 --
--- Name: sites idx_16436_primary; Type: CONSTRAINT; Schema: diveshop; Owner: laguilar
+-- Name: sites idx_16436_primary; Type: CONSTRAINT; Schema: diveshop; Owner: postgres
 --
 
 ALTER TABLE ONLY diveshop.sites
@@ -1043,140 +1043,140 @@ ALTER TABLE ONLY diveshop.sites
 
 
 --
--- Name: idx_16388_bionameindx; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16388_bionameindx; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE UNIQUE INDEX idx_16388_bionameindx ON diveshop.biolife USING btree (species_name);
 
 
 --
--- Name: idx_16394_site_no; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16394_site_no; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16394_site_no ON diveshop.biosite USING btree (site_no);
 
 
 --
--- Name: idx_16394_species_no; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16394_species_no; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16394_species_no ON diveshop.biosite USING btree (species_no);
 
 
 --
--- Name: idx_16397_body_of_water; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16397_body_of_water; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16397_body_of_water ON diveshop.dest USING btree (body_of_water);
 
 
 --
--- Name: idx_16397_destination_name; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16397_destination_name; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE UNIQUE INDEX idx_16397_destination_name ON diveshop.dest USING btree (destination_name);
 
 
 --
--- Name: idx_16403_customer_no; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16403_customer_no; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE UNIQUE INDEX idx_16403_customer_no ON diveshop.divecust USING btree (customer_no);
 
 
 --
--- Name: idx_16403_zip_postal_code; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16403_zip_postal_code; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16403_zip_postal_code ON diveshop.divecust USING btree (zip_postal_code);
 
 
 --
--- Name: idx_16409_diveordsdiveitem; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16409_diveordsdiveitem; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16409_diveordsdiveitem ON diveshop.diveitem USING btree (order_no);
 
 
 --
--- Name: idx_16409_divestokdiveitem; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16409_divestokdiveitem; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16409_divestokdiveitem ON diveshop.diveitem USING btree (item_no);
 
 
 --
--- Name: idx_16409_item_no; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16409_item_no; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16409_item_no ON diveshop.diveitem USING btree (item_no);
 
 
 --
--- Name: idx_16409_order_no; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16409_order_no; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16409_order_no ON diveshop.diveitem USING btree (order_no);
 
 
 --
--- Name: idx_16415_customer_no; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16415_customer_no; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16415_customer_no ON diveshop.diveords USING btree (customer_no);
 
 
 --
--- Name: idx_16415_destdiveords; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16415_destdiveords; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16415_destdiveords ON diveshop.diveords USING btree (destination);
 
 
 --
--- Name: idx_16415_divecustdiveords; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16415_divecustdiveords; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16415_divecustdiveords ON diveshop.diveords USING btree (customer_no);
 
 
 --
--- Name: idx_16415_diveordsship_via; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16415_diveordsship_via; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16415_diveordsship_via ON diveshop.diveords USING btree (ship_via);
 
 
 --
--- Name: idx_16415_shipviadiveords; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16415_shipviadiveords; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16415_shipviadiveords ON diveshop.diveords USING btree (ship_via);
 
 
 --
--- Name: idx_16427_shipviaship_via; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16427_shipviaship_via; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16427_shipviaship_via ON diveshop.shipvia USING btree (ship_via);
 
 
 --
--- Name: idx_16430_shipwrcksite_no; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16430_shipwrcksite_no; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16430_shipwrcksite_no ON diveshop.shipwrck USING btree (site_no);
 
 
 --
--- Name: idx_16436_site_no; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16436_site_no; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE UNIQUE INDEX idx_16436_site_no ON diveshop.sites USING btree (site_no);
 
 
 --
--- Name: idx_16436_sitesdestination_no; Type: INDEX; Schema: diveshop; Owner: laguilar
+-- Name: idx_16436_sitesdestination_no; Type: INDEX; Schema: diveshop; Owner: postgres
 --
 
 CREATE INDEX idx_16436_sitesdestination_no ON diveshop.sites USING btree (destination_no);
