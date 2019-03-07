@@ -1,6 +1,6 @@
 # Flask Web App With Python
-Updated from here:  https://pythonspot.com/flask-web-app-with-python/
-Further Explanation:  http://flask.pocoo.org/docs/1.0/quickstart/
+- Updated from here:  https://pythonspot.com/flask-web-app-with-python/
+- Further Explanation:  http://flask.pocoo.org/docs/1.0/quickstart/
 
 In this tutorial you’ll learn how to build a web app with Python. We’ll use a micro-framework called Flask.
 
@@ -80,20 +80,22 @@ def getMember(name):
 if __name__ == "__main__":
    app.run()
 ```
-   
-Restart the application using:
 
-$ python hello.py
-* Running on http://localhost:5000/
+Start app.py
+
+`$ set FLASK_APP=app.py; set FLASK_ENV=development`
+
+`flask run`
+
 Try the URLs in your browser:
 
-http://127.0.0.1:5000/
-http://127.0.0.1:5000/hello
-http://127.0.0.1:5000/members
-http://127.0.0.1:5000/members/Jordan/
-python-flask-webapp
-python-flask-webapp
-Style Flask Pages
+- http://127.0.0.1:5000/
+- http://127.0.0.1:5000/hello
+- http://127.0.0.1:5000/members
+- http://127.0.0.1:5000/members/Jordan/
+
+### Style Flask Pages
+
 We will separate code and User Interface using a technique called Templates. We make the directory called /templates/ and create the template:
 
 <h1>Hello {{name}}</h1>
