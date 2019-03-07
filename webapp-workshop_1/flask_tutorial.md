@@ -3,22 +3,18 @@ Updated from here:  https://pythonspot.com/flask-web-app-with-python/
 
 In this tutorial you’ll learn how to build a web app with Python. We’ll use a micro-framework called Flask.
 
-### Why Flask?
+## Why Flask?
+- easy to use.
+- built in development server and debugger
+- integrated unit testing support
+- RESTful request dispatching
+- uses Jinja2 templating
+- support for secure cookies (client side sessions)
+- 100% WSGI 1.0 compliant
+- Unicode based
+= extensively documented
 
-easy to use.
-built in development server and debugger
-integrated unit testing support
-RESTful request dispatching
-uses Jinja2 templating
-support for secure cookies (client side sessions)
-100% WSGI 1.0 compliant
-Unicode based
-extensively documented
- 
-Related course:
-Python Flask: Make Web Apps with Python
-
-Installing Flask
+### Installing Flask
 Install Flask using the command below:
 
 $ pip install Flask
