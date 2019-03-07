@@ -35,11 +35,19 @@ if __name__ == "__main__":
 
 Finally run the web app using this command:
 
-`$ export FLASK_APP=hello.py; flask run`
+(UNIX)
+
+`$ export FLASK_APP=hello.py`
+
+(WINDOWS)
+
+`$ set FLASK_APP=hello.py`
+
+`flask run`
 
 Open http://localhost:5000/ in your webbrowser, and “Hello World!” should appear.
 
-Creating URL routes
+### Creating URL routes
 URL Routing makes URLs in your Web app easy to remember. We will now create some URL routes:
 
 /hello
