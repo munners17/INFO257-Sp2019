@@ -15,20 +15,22 @@ In this tutorial you’ll learn how to build a web app with Python. We’ll use 
 = extensively documented
 
 ### Installing Flask
-Install Flask using the command below:
+Install Flask using the command:
+`$ pip install Flask`
 
-$ pip install Flask
 Create a file called hello.py
-
+```
 from flask import Flask
 app = Flask(__name__)
  
 @app.route("/")
 def hello():
-return "Hello World!"
+   return "Hello World!"
  
 if __name__ == "__main__":
-app.run()
+   app.run()
+```
+
 Finally run the web app using this command:
 
 $ python hello.py
