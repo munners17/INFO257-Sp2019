@@ -122,23 +122,22 @@ if __name__ == "__main__":
 
 You can then open : http://127.0.0.1/hello/Jackson/
 
-Styling the template
-Do you want some better looking template? We modify the file:
-
+### Styling the template
+Do you want a better looking template? Lets modify the file:
+```
 {% extends "layout.html" %}
 {% block body %}
 <div class="block1">
 <h1>Hello {{name}}!</h1>
 <h2>Here is an interesting quote for you:</h2>
 "The limits of my language are the limits of my mind. All I know is what I have words for."
- 
 <img src="http://www.naturalprogramming.com/images/smilingpython.gif">
- 
 </div>
 {% endblock %}
-We then create layout.html which defines the look of the page. (You may want to split the stylesheet and layout.html file). Copy this as layout.html
+```
 
- 
+We then create layout.html which defines the look of the page. (You may want to split the stylesheet and layout.html file). Copy this as layout.html
+```
 <title>Website</title>
  
 <style>
@@ -152,13 +151,14 @@ h1{<br />
     color: #8ac640;<br />
     font-size: 2.5em;<br />
 }</p>
-</style>{% block body %}{% endblock %}
-Restart the App and open the url. http://127.0.0.1/hello/Jackson/
+</style>
+{% block body %}
+{% endblock %}
+```
+Restart the App (if needed) and open the url. http://127.0.0.1/hello/Jackson/
 You can pick any name other than Jackson.
 
-python-webapp-flask
-python webapp flask
-Passing Variables
+### Passing Variables
 Lets display random quotes instead of always the same quote. We will need to pass both the name variable and the quote variable. To pass multiple variables to the function, we simply do this:
 
     return render_template(
