@@ -16,8 +16,10 @@ In this tutorial you’ll learn how to build a web app with Python. We’ll use 
 
 ### Installing Flask
 Install Flask using the command:
+
 `$ pip install Flask`
 
+### Create the first app
 Create a file called hello.py
 ```
 from flask import Flask
@@ -33,8 +35,8 @@ if __name__ == "__main__":
 
 Finally run the web app using this command:
 
-$ python hello.py
-* Running on http://localhost:5000/
+`$ export FLASK_APP=hello.py; flask run`
+
 Open http://localhost:5000/ in your webbrowser, and “Hello World!” should appear.
 
 Creating URL routes
