@@ -98,24 +98,28 @@ Try the URLs in your browser:
 
 We will separate code and User Interface using a technique called Templates. We make the directory called /templates/ and create the template:
 
-<h1>Hello {{name}}</h1>
+`<h1>Hello {{name}}</h1>`
+
 The Python Flask app with have a new URL route. We have changed the default port to 80, the default HTTP port:
 
+```
 from flask import Flask, flash, redirect, render_template, request, session, abort
  
 app = Flask(__name__)
  
 @app.route("/")
 def index():
-return "Flask App!"
+   return "Flask App!"
  
 @app.route("/hello/<string:name>/")
 def hello(name):
-return render_template(
-'test.html',name=name)</string:name>
+   return render_template(
+   'test.html',name=name)</string:name>
  
 if __name__ == "__main__":
-app.run(host='0.0.0.0', port=80)
+   app.run(host='0.0.0.0', port=80)
+```
+
 You can then open : http://127.0.0.1/hello/Jackson/
 
 Styling the template
