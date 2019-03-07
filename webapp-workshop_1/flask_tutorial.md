@@ -160,11 +160,13 @@ You can pick any name other than Jackson.
 
 ### Passing Variables
 Lets display random quotes instead of always the same quote. We will need to pass both the name variable and the quote variable. To pass multiple variables to the function, we simply do this:
-
-    return render_template(
+```
+   return render_template(
 'test.html',**locals())
-Our new test.html template will look like this:
+```
 
+Our new test.html template will look like this:
+```
 {% extends "layout.html" %}
 {% block body %}
 <div class="block1">
@@ -176,8 +178,10 @@ Our new test.html template will look like this:
  
 </div>
 {% endblock %}
-We will need to pick a random quote. To do so, we use this code:
+```
 
+We will need to pick a random quote. To do so, we use this code:
+```
     quotes = [ "'If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.' -- John Louis von Neumann ",
 "'Computer science is no more about computers than astronomy is about telescopes' --  Edsger Dijkstra ",
 "'To understand recursion you must first understand recursion..' -- Unknown",
@@ -186,8 +190,10 @@ We will need to pick a random quote. To do so, we use this code:
 "'Not everyone will understand your journey. Thats fine. Its not their journey to make sense of. Its yours.' -- Unknown"  ]
 randomNumber = randint(0,len(quotes)-1)
 quote = quotes[randomNumber]
-The first thing you see is we have defined an array of multiples quotes. These can be accessed as quote[0], quote[1], quote[2] and so on. The function randint() returns a random number between 0 and the total number of quotes, one is subtracted because we start counting from zero. Finally we set the quote variable to the quote the computer has chosen. Copy the code below to app.py:
+```
 
+The first thing you see is we have defined an array of multiples quotes. These can be accessed as quote[0], quote[1], quote[2] and so on. The function randint() returns a random number between 0 and the total number of quotes, one is subtracted because we start counting from zero. Finally we set the quote variable to the quote the computer has chosen. Copy the code below to app.py:
+```
 from flask import Flask, flash, redirect, render_template, request, session, abort
 from random import randint
  
@@ -195,7 +201,7 @@ app = Flask(__name__)
  
 @app.route("/")
 def index():
-return "Flask App!"
+   return "Flask App!"
  
 #@app.route("/hello/<string:name>")
 @app.route("/hello/<string:name>/")
@@ -214,8 +220,7 @@ return render_template(
 'test.html',**locals())
  
 if __name__ == "__main__":
-app.run(host='0.0.0.0', port=80)
-When you restart the application it will return one of these quotes at random.
+   app.run(host='0.0.0.0', port=80)
+```
 
-python-flask-webap
-python flask webap
+When you restart the application it will return one of these quotes at random.
