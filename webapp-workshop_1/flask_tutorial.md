@@ -1,5 +1,6 @@
 # Flask Web App With Python
 Updated from here:  https://pythonspot.com/flask-web-app-with-python/
+Further Explanation:  http://flask.pocoo.org/docs/1.0/quickstart/
 
 In this tutorial you’ll learn how to build a web app with Python. We’ll use a micro-framework called Flask.
 
@@ -37,45 +38,49 @@ Finally run the web app using this command:
 
 (UNIX)
 
-`$ export FLASK_APP=hello.py`
+`$ export FLASK_APP=hello.py; export FLASK_ENV=development`
 
 (WINDOWS)
 
-`$ set FLASK_APP=hello.py`
+`$ set FLASK_APP=hello.py; set FLASK_ENV=development`
 
 `flask run`
 
 Open http://localhost:5000/ in your webbrowser, and “Hello World!” should appear.
 
 ### Creating URL routes
-URL Routing makes URLs in your Web app easy to remember. We will now create some URL routes:
+URL Routing makes URLs in your Web app easy to remember.
 
-/hello
-/members/
-/members/name/
+We will now create some URL routes:
+- /hello
+- /members/
+- /members/name/
+
 Copy the code below and save it as app.py
-
+```
 from flask import Flask
 app = Flask(__name__)
  
 @app.route("/")
 def index():
-return "Index!"
+   return "Index!"
  
 @app.route("/hello")
 def hello():
-return "Hello World!"
+   return "Hello World!"
  
 @app.route("/members")
 def members():
-return "Members"
+   return "Members"
  
 @app.route("/members/<string:name>/")
 def getMember(name):
-return name</string:name>
+   return name
  
 if __name__ == "__main__":
-app.run()
+   app.run()
+```
+   
 Restart the application using:
 
 $ python hello.py
