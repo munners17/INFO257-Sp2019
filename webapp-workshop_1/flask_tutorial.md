@@ -114,13 +114,13 @@ def index():
 @app.route("/hello/<string:name>/")
 def hello(name):
    return render_template(
-   'test.html',name=name)</string:name>
+   'test.html',name=name)
  
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80)
 ```
 
-You can then open : http://127.0.0.1/hello/Jackson/
+You can then open : http://127.0.0.1:5000/hello/Jackson/
 
 ### Styling the template
 Do you want a better looking template? Lets modify the file:
